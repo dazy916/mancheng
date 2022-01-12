@@ -11,6 +11,7 @@ import garden from './assets/image/dixing.png'
 import gardenAct from './assets/image/dixing-active.png'
 import exemption from './assets/image/shiyingxing.png'
 import exemptionAct from './assets/image/shiyingxing-active.png'
+import nav from './assets/image/logo-nav.png'
 const active = ref(0);
 const icon = {
   homeAct,
@@ -20,17 +21,17 @@ const icon = {
   garden,
   gardenAct,
   exemption,
-  exemptionAct
+  exemptionAct,
+  nav
 };
 // const active = ref(0);
 const status = reactive({ menuShow: false })
 </script>
 
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <router-view></router-view>
-  <van-icon name="more" color="#fff" size="2em" class="indexicon" @click="status.menuShow = true" />
+  <van-image class="indexicon" width="3.3em" height="3em" @click="status.menuShow = true" :src="icon.nav"></van-image>
+  <!-- <van-icon name="more" color="#fff" size="2em" class="indexicon" @click="status.menuShow = true" /> -->
   <van-popup v-model:show="status.menuShow"  position="bottom">
     
 <van-tabbar v-model="active" route class="nav">
@@ -74,13 +75,15 @@ const status = reactive({ menuShow: false })
   /* padding-bottom: 2rem; */
 }
 body {
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 0;
+  overflow: hidden;
   background-image: linear-gradient(to bottom right, #260900,#231915 );
 }
 .indexicon {
   position: absolute;
   left: 0em;
-  bottom: 1.6em;
+  bottom:3.6em;
   z-index: 999;
 }
 .main {
