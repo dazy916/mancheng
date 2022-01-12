@@ -29,14 +29,14 @@ let houseData = [
   { title: 'B2户型', icon: icon.cHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' },
   { title: 'B3户型', icon: icon.dHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' },
   { title: 'C1户型', icon: icon.eHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: '联排', icon: icon.fHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' }
+  { title: '联排', icon: icon.fHouse4, src: 'https://720yun.com/t/3dvkzq2w5rq' }
 ]
-let lianData = [
+let lianData = [  
+  { title: '负一层', icon: icon.fHouse4, src: 'https://720yun.com/t/3dvkzq2w5rq'},
   { title: '一层', icon: icon.fHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' },
   { title: '二层',  icon: icon.fHouse1, src: 'https://720yun.com/t/3dvkzq2w5rq' },
   { title: '三层',icon: icon.fHouse2, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: '四层',icon: icon.fHouse3, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: '负一层', icon: icon.fHouse4, src: 'https://720yun.com/t/3dvkzq2w5rq'}
+  { title: '四层',icon: icon.fHouse3, src: 'https://720yun.com/t/3dvkzq2w5rq' }
 ]
 const status = reactive({
   visiable: false,

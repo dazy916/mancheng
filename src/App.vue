@@ -30,36 +30,40 @@ const status = reactive({ menuShow: false })
 
 <template>
   <router-view></router-view>
-  <van-image class="indexicon" width="3.3em" height="3em" @click="status.menuShow = true" :src="icon.nav"></van-image>
-  <!-- <van-icon name="more" color="#fff" size="2em" class="indexicon" @click="status.menuShow = true" /> -->
-  <van-popup v-model:show="status.menuShow"  position="bottom">
-    
-<van-tabbar v-model="active" route class="nav">
-    <van-tabbar-item replace to="/index">
-      <span>全景鸟瞰</span>
-      <template #icon="props">
-        <img :src="props.active ? icon.homeAct : icon.home" />
-      </template>
-    </van-tabbar-item>
-    <van-tabbar-item replace to="/house">
-      <span>户型鉴赏</span>
-      <template #icon="props">
-        <img :src="props.active ? icon.roomAct : icon.room" />
-      </template>
-    </van-tabbar-item>
-    <van-tabbar-item replace to="/view">
-      <span>园林漫游</span>
-      <template #icon="props">
-        <img :src="props.active ? icon.gardenAct : icon.garden" />
-      </template>
-    </van-tabbar-item>
-    <van-tabbar-item replace to="/exemption">
-      <span>免责条款</span>
-      <template #icon="props">
-        <img :src="props.active ? icon.exemptionAct : icon.exemption" />
-      </template>
-    </van-tabbar-item>
-  </van-tabbar>
+  <van-image
+    class="indexicon"
+    width="3.3em"
+    height="3em"
+    @click="status.menuShow = true"
+    :src="icon.nav"
+  ></van-image>
+  <van-popup v-model:show="status.menuShow" position="bottom">
+    <van-tabbar v-model="active" route class="nav">
+      <van-tabbar-item replace to="/index">
+        <span>全景鸟瞰</span>
+        <template #icon="props">
+          <img :src="props.active ? icon.homeAct : icon.home" />
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/house">
+        <span>户型鉴赏</span>
+        <template #icon="props">
+          <img :src="props.active ? icon.roomAct : icon.room" />
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/view">
+        <span>园林漫游</span>
+        <template #icon="props">
+          <img :src="props.active ? icon.gardenAct : icon.garden" />
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/exemption">
+        <span>免责条款</span>
+        <template #icon="props">
+          <img :src="props.active ? icon.exemptionAct : icon.exemption" />
+        </template>
+      </van-tabbar-item>
+    </van-tabbar>
   </van-popup>
   <!--<div class="house"></div>
   <div class="line"></div>
@@ -78,12 +82,13 @@ body {
   /* height: 100vh; */
   padding: 0;
   overflow: hidden;
-  background-image: linear-gradient(to bottom right, #260900,#231915 );
+  background-image: linear-gradient(to bottom right, #260900, #231915);
 }
 .indexicon {
   position: absolute;
-  left: 0em;
-  bottom:3.6em;
+  left: 50%;
+  margin-left: -1.75em;
+  bottom: 0.5em;
   z-index: 999;
 }
 .main {
