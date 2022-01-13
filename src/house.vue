@@ -24,19 +24,19 @@ const icon = {
   fHouse4
 };
 let houseData = [
-  { title: 'A1户型', icon: icon.aHouse, src: 'https://720yun.com/t/55vkzq2ys8m' },
-  { title: 'B1户型', icon: icon.bHouse, src: 'https://720yun.com/t/cavkzq2ys8h' },
-  { title: 'B2户型', icon: icon.cHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: 'B3户型', icon: icon.dHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: 'C1户型', icon: icon.eHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: '联排', icon: icon.fHouse4, src: 'https://720yun.com/t/3dvkzq2w5rq' }
+  { title: 'A3户型', icon: icon.aHouse, src: 'https://720yun.com/t/0bvkbe8mzpe' },
+  { title: 'B1户型', icon: icon.bHouse, src: 'https://720yun.com/t/9bvkbe8b58y' },
+  { title: 'B2户型', icon: icon.cHouse, src: 'https://720yun.com/t/d9vkbe8b5iq' },
+  { title: 'B3户型', icon: icon.dHouse, src: 'https://720yun.com/t/f8vkbe8bpf7' },
+  { title: 'C1户型', icon: icon.eHouse, src: 'https://720yun.com/t/22vkbe8b0dm' },
+  { title: '联排', icon: icon.fHouse4, src: 'https://720yun.com/t/46vkbe8b7im' }
 ]
 let lianData = [  
-  { title: '负一层', icon: icon.fHouse4, src: 'https://720yun.com/t/3dvkzq2w5rq'},
-  { title: '一层', icon: icon.fHouse, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: '二层',  icon: icon.fHouse1, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: '三层',icon: icon.fHouse2, src: 'https://720yun.com/t/3dvkzq2w5rq' },
-  { title: '四层',icon: icon.fHouse3, src: 'https://720yun.com/t/3dvkzq2w5rq' }
+  { title: '地下室', icon: icon.fHouse4, src: 'https://720yun.com/t/46vkbe8b7im'},
+  { title: '一层', icon: icon.fHouse, src: 'https://720yun.com/t/46vkbe8b7im' },
+  { title: '二层',  icon: icon.fHouse1, src: 'https://720yun.com/t/46vkbe8b7im' },
+  { title: '三层',icon: icon.fHouse2, src: 'https://720yun.com/t/46vkbe8b7im' },
+  { title: '顶层',icon: icon.fHouse3, src: 'https://720yun.com/t/46vkbe8b7im' }
 ]
 const status = reactive({
   visiable: false,
@@ -59,7 +59,8 @@ function watchKey(index){
   <van-tabs
     @click="onClick"
     v-model="active"
-    background="#013e3d"
+    shrink
+    background="#231915"
     color="#eac699"
     title-active-color="#eac699"
     title-inactive-color="#fff"
@@ -140,7 +141,7 @@ function watchKey(index){
   width: 4em;
   right: 0;
   top: 48%;
-  z-index: 10;
+  z-index: 3;
   .van-sidebar-item{
     padding: .5em;
   }

@@ -26,18 +26,24 @@ const icon = {
 };
 // const active = ref(0);
 const status = reactive({ menuShow: false })
+function open(){
+  status.menuShow = true
+  setTimeout(()=>{
+    status.menuShow = false
+  },3000)
+}
 </script>
 
 <template>
   <router-view></router-view>
   <van-image
     class="indexicon"
-    width="3.3em"
+    width="3.5em"
     height="3em"
-    @click="status.menuShow = true"
+    @click="open"
     :src="icon.nav"
   ></van-image>
-  <van-popup v-model:show="status.menuShow" position="bottom">
+  <van-popup v-model:show="status.menuShow" position="bottom" :overlay="false">
     <van-tabbar v-model="active" route class="nav">
       <van-tabbar-item replace to="/index">
         <span>全景鸟瞰</span>
@@ -81,14 +87,14 @@ const status = reactive({ menuShow: false })
 body {
   /* height: 100vh; */
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-image: linear-gradient(to bottom right, #260900, #231915);
 }
 .indexicon {
   position: absolute;
   left: 50%;
   margin-left: -1.75em;
-  bottom: 0.5em;
+  bottom: 2.5em;
   z-index: 999;
 }
 .main {
@@ -99,6 +105,7 @@ body {
   box-sizing: border-box;
 }
 .nav {
+  border-radius: 2em;
   background-image: linear-gradient(#3e2201, #260900);
 }
 .van-tabbar-item {
