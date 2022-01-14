@@ -1,58 +1,76 @@
 <script setup>
-import aHouse from './assets/image/a.jpg'
-import bHouse from './assets/image/b1.jpg'
-import cHouse from './assets/image/b2.jpg'
-import dHouse from './assets/image/b3.jpg'
-import eHouse from './assets/image/c1.jpg'
-import fHouse from './assets/image/l1.jpg'
-import fHouse1 from './assets/image/l2.jpg'
-import fHouse2 from './assets/image/l3.jpg'
-import fHouse3 from './assets/image/l4.jpg'
-import fHouse4 from './assets/image/l5.jpg'
+// import aHouse from './assets/image/a.jpg'
+// import bHouse from './assets/image/b1.jpg'
+// import cHouse from './assets/image/b2.jpg'
+// import dHouse from './assets/image/b3.jpg'
+// import eHouse from './assets/image/c1.jpg'
+// import fHouse from './assets/image/l1.jpg'
+// import fHouse1 from './assets/image/l2.jpg'
+// import fHouse2 from './assets/image/l3.jpg'
+// import fHouse3 from './assets/image/l4.jpg'
+// import fHouse4 from './assets/image/l5.jpg'
 import { ref, reactive } from 'vue'
 const active = ref(0);
-const icon = {
-  aHouse,
-  bHouse,
-  cHouse,
-  dHouse,
-  eHouse,
-  fHouse,
-  fHouse1,
-  fHouse2,
-  fHouse3,
-  fHouse4
-};
+// const icon = {
+//   aHouse,
+//   bHouse,
+//   cHouse,
+//   dHouse,
+//   eHouse,
+//   fHouse,
+//   fHouse1,
+//   fHouse2,
+//   fHouse3,
+//   fHouse4
+// };
+// let houseData = [
+//   { title: 'A3户型', icon: icon.aHouse, src: 'https://720yun.com/t/0bvkbe8mzpe' },
+//   { title: 'B1户型', icon: icon.bHouse, src: 'https://720yun.com/t/9bvkbe8b58y' },
+//   { title: 'B2户型', icon: icon.cHouse, src: 'https://720yun.com/t/d9vkbe8b5iq' },
+//   { title: 'B3户型', icon: icon.dHouse, src: 'https://720yun.com/t/f8vkbe8bpf7' },
+//   { title: 'C1户型', icon: icon.eHouse, src: 'https://720yun.com/t/22vkbe8b0dm' },
+//   { title: '联排', icon: icon.fHouse4, src: 'https://720yun.com/t/46vkbe8b7im' }
+// ]
+// let lianData = [  
+//   { title: '地下室', icon: icon.fHouse4, src: 'https://720yun.com/t/46vkbe8b7im'},
+//   { title: '一层', icon: icon.fHouse, src: 'https://720yun.com/t/46vkbe8b7im' },
+//   { title: '二层',  icon: icon.fHouse1, src: 'https://720yun.com/t/46vkbe8b7im' },
+//   { title: '三层',icon: icon.fHouse2, src: 'https://720yun.com/t/46vkbe8b7im' },
+//   { title: '顶层',icon: icon.fHouse3, src: 'https://720yun.com/t/46vkbe8b7im' }
+// ]
 let houseData = [
-  { title: 'A3户型', icon: icon.aHouse, src: 'https://720yun.com/t/0bvkbe8mzpe' },
-  { title: 'B1户型', icon: icon.bHouse, src: 'https://720yun.com/t/9bvkbe8b58y' },
-  { title: 'B2户型', icon: icon.cHouse, src: 'https://720yun.com/t/d9vkbe8b5iq' },
-  { title: 'B3户型', icon: icon.dHouse, src: 'https://720yun.com/t/f8vkbe8bpf7' },
-  { title: 'C1户型', icon: icon.eHouse, src: 'https://720yun.com/t/22vkbe8b0dm' },
-  { title: '联排', icon: icon.fHouse4, src: 'https://720yun.com/t/46vkbe8b7im' }
+  { title: 'A3户型', icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/a.67fd216c.jpg', src: 'https://720yun.com/t/0bvkbe8mzpe' },
+  { title: 'B1户型', icon:'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/b1.3306c150.jpg', src: 'https://720yun.com/t/9bvkbe8b58y' },
+  { title: 'B2户型', icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/b2.96404cfb.jpg', src: 'https://720yun.com/t/d9vkbe8b5iq' },
+  { title: 'B3户型', icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/b3.a8726ac7.jpg', src: 'https://720yun.com/t/f8vkbe8bpf7' },
+  { title: 'C1户型', icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/c1.556593dd.jpg', src: 'https://720yun.com/t/22vkbe8b0dm' },
+  { title: '联排', icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/l1.0fe4632f.jpg', src: 'https://720yun.com/t/46vkbe8b7im' }
 ]
 let lianData = [  
-  { title: '地下室', icon: icon.fHouse4, src: 'https://720yun.com/t/46vkbe8b7im'},
-  { title: '一层', icon: icon.fHouse, src: 'https://720yun.com/t/46vkbe8b7im' },
-  { title: '二层',  icon: icon.fHouse1, src: 'https://720yun.com/t/46vkbe8b7im' },
-  { title: '三层',icon: icon.fHouse2, src: 'https://720yun.com/t/46vkbe8b7im' },
-  { title: '顶层',icon: icon.fHouse3, src: 'https://720yun.com/t/46vkbe8b7im' }
+  { title: '地下室', icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/l1.0fe4632f.jpg', src: 'https://720yun.com/t/46vkbe8b7im'},
+  { title: '一层', icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/l2.b7da3f29.jpg', src: 'https://720yun.com/t/46vkbe8b7im' },
+  { title: '二层',  icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/l3.0a6bb4dd.jpg', src: 'https://720yun.com/t/46vkbe8b7im' },
+  { title: '三层',icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/l4.f3ee4c19.jpg', src: 'https://720yun.com/t/46vkbe8b7im' },
+  { title: '顶层',icon: 'https://cqenjoytest.oss-cn-shenzhen.aliyuncs.com/mancheng/l5.85bbd729.jpg', src: 'https://720yun.com/t/46vkbe8b7im' }
 ]
 const status = reactive({
   visiable: false,
   isIndex: 0,
   activeKey:0,
-  isSRC:''
+  isSRC:'',
+  isVR:''
 })
 status.isSRC=houseData[0].icon
 function onClick( index,item) {
   status.isIndex = index
   status.isSRC=houseData[index].icon
+  status.isVR=houseData[index].src
 }
 function watchKey(index){  
   status.isIndex = index+6
   status.isSRC=lianData[index].icon
-  console.log(status.isIndex)
+  status.isVR=lianData[index].src
+  console.log(status.isSRC)
 }
 </script>
 <template>
@@ -112,7 +130,7 @@ function watchKey(index){
     color="#ffffff"
     @click="status.visiable = false"
   />
-  <iframe v-if="status.visiable" :src="houseData[status.isIndex].src" frameborder="no" class="show"></iframe>
+  <iframe v-if="status.visiable" :src="status.isVR" frameborder="no" class="show"></iframe>
 </template>
 <style lang="less" scoped>
 .huxing {
